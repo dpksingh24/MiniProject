@@ -1,0 +1,153 @@
+section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0px auto;
+  display: table;
+  position: relative;
+}
+
+header {
+  width: 100%;
+  display: table;
+  background-color: #282828;
+  margin-bottom: 0px;
+}
+#logo {
+  float: left;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #eee;
+  font-weight: 600;
+  padding: 20px 0px;
+}
+nav {
+  width: auto;
+  float: right;
+}
+nav ul {
+  display: table;
+  float: right;
+}
+nav ul li {
+  float: left;
+  list-style: none;
+}
+nav ul li:last-child {
+  padding-right: 0px;
+}
+nav ul li a {
+  color: #fff;
+  font-size: 18px;
+  padding: 25px 20px;
+  display: inline-block;
+  transition: all 0.5s ease 0s;
+}
+nav ul li a:hover {
+  background-color: #222;
+  color: #fff;
+  transition: all 0.5s ease 0s;
+}
+nav ul li a:hover i {
+  color: #fde428;
+  transition: all 0.5s ease 0s;
+}
+nav ul li a i {
+  padding-right: 10px;
+  color: #002e5b;
+  transition: all 0.5s ease 0s;
+}
+
+.toggle-menu ul {
+  display: table;
+  width: 25px;
+}
+.toggle-menu ul li {
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  margin-bottom: 4px;
+  list-style: none;
+}
+.toggle-menu ul li:last-child {
+  margin-bottom: 0px;
+}
+
+input[type="checkbox"],
+label {
+  display: none;
+}
+
+@media only screen and (max-width: 1440px) {
+  section {
+    max-width: 95%;
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  header {
+    padding: 20px 0px;
+  }
+  #logo {
+    padding: 0px;
+  }
+  input[type="checkbox"] {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    background: none;
+  }
+  input[type="checkbox"]:fous {
+    background: none;
+  }
+  label {
+    float: right;
+    padding: 8px 0px;
+    display: inline-block;
+    cursor: pointer;
+  }
+  input[type="checkbox"]:checked ~ nav {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    right: 0px;
+    top: 53px;
+    background-color: #002e5b;
+    padding: 0px;
+    z-index: 99;
+  }
+  nav ul {
+    width: auto;
+  }
+  nav ul li {
+    float: none;
+    padding: 0px;
+    width: 100%;
+    display: table;
+  }
+  nav ul li a {
+    color: #fff;
+    font-size: 15px;
+    padding: 10px 20px;
+    display: block;
+    border-bottom: 1px solid rgba(225, 225, 225, 0.1);
+  }
+  nav ul li a i {
+    color: #fde428;
+    padding-right: 13px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  label {
+    padding: 5px 0px;
+  }
+  #logo {
+    font-size: 20px;
+  }
+  nav {
+    top: 47px;
+  }
+}
